@@ -1,0 +1,107 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using SchoolB.Models
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.5.1/fontawesome-free-6.5.1-web/css/all.min.css">
+</head>
+<body>
+    <section class="vh-100" style="background-color: #f4f5f7;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-6 mb-4 mb-lg-0">
+                    <div class="card mb-3" style="border-radius: .5rem;">
+                        <div class="row g-0">
+                            <div class="col-md-4 gradient-custom text-center text-white"
+                                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img src="https://stnonline.com/wp-content/uploads/2020/03/icce-ilinois-school-bus-scaled.jpg"
+                                     alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+
+                                <h5></h5>
+
+                                <i class="far fa-edit mb-5"></i>
+                            </div>
+                            <form asp-controller="User" asp-action="Edit" method="post">
+                                
+                                    <div class="col-md-8">
+                                        <div class="card-body p-4">
+                                            <h6>Information</h6>
+                                            <hr class="mt-0 mb-4">
+                                            <div class="row pt-1">
+                                                <div class="col-6 mb-3">
+                                                    <h6>UserID</h6>
+                                                    <p class="text-muted"></p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+
+                                                    <input type="text" placeholder="" asp-for="UserId" readonly/>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-1">
+                                                <div class="col-6 mb-3">
+                                                    <h6>Full Name</h6>
+                                                    <p class="text-muted"></p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <input type="text" placeholder="" asp-for="FullName"/>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-1">
+                                                <div class="col-6 mb-3">
+                                                    <h6>Address</h6>
+                                                    <p class="text-muted"></p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <input type="text" placeholder="" asp-for="Address"/>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-1">
+                                                <div class="col-6 mb-3">
+                                                    <h6>Phone</h6>
+                                                    <p class="text-muted"></p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <input type="text" placeholder="" asp-for="Phone"/>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-1">
+                                                <div class="col-6 mb-3">
+                                                    <h6>User Name</h6>
+                                                    <p class="text-muted"></p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <input type="text" placeholder="" asp-for="Username"/>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-1">
+                                                <div class="col-6 mb-3">
+                                                    <h6>Password</h6>
+                                                    <p class="text-muted"></p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <input type="text" placeholder=""  asp-for="Password"/>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Edit</button>
+                                            <a href="javascript:history.back()" class="btn btn-primary ">Back</a>
+                                        </div>
+                                    </div>
+                                                       
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
